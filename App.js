@@ -1,20 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { StatusBar, SafeAreaView, View } from 'react-native';
+
+import Cesta from './src/telas/Cesta'
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    // SafeAreaView serve para app ios, para renderizar o conteudo dentro dos limites da area segura de um dispositivo (aplicavel apenas para ios)
+    // StatusBar é a barra de status é a zona, normalmente na parte superior da tela, que exibe a hora atual, informações de rede Wi-Fi e celular, nível de bateria e/ou outros ícones de status.
+    
+    <SafeAreaView>
+      <StatusBar/>
+      <View>
+        <Cesta/>
+      </View>
+
+    </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
