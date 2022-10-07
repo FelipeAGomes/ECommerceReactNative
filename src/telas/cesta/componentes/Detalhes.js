@@ -1,18 +1,19 @@
 import React from 'react';
-import { View, Image, StyleSheet } from 'react-native';
+import { View, Image, StyleSheet} from 'react-native';
 
 import Texto from '../../../componentes/Texto';
-import logo from '../../../../assets/logo.png';
 
-export default function Detalhes(){
+// TouchableOpacity e o botao com opacidade quando onclick, o button normal tem uma grande limitacao de edicao.
+
+export default function Detalhes({nome, logoFazenda, nomeFazenda, descricao}){
     return <>
-        <Texto style={estilos.nome}>Cesta de Verduras</Texto>
+        <Texto style={estilos.nome}>{nome}</Texto>
             <View style={estilos.fazenda}>
-                <Image source={logo} style={estilos.imagemFazenda}/>
-                <Texto style={estilos.nomeFazenda}>Jenny Jack Farm</Texto>
+                <Image source={logoFazenda} style={estilos.logoFazenda}/>
+                <Texto style={estilos.nomeFazenda}>{nomeFazenda}</Texto>
             </View>        
-            <Texto style={estilos.descricao}>Uma cesta com produtos selecionados cuidadosamente da fazenda direto para a sua cozinha</Texto>
-            <Texto style={estilos.preco}>R$40,00</Texto>
+        <Texto style={estilos.descricao}>{descricao}</Texto>
+        
     </>
 }
 
@@ -27,7 +28,7 @@ const estilos = StyleSheet.create({
       flexDirection: "row", // ReactNative tem o flexDirection colunm por padrao
       paddingVertical: 12,
     },
-    imagemFazenda:{
+    logoFazenda:{
         width: 32,
         height: 32,
     },
@@ -48,5 +49,19 @@ const estilos = StyleSheet.create({
         fontSize: 26,
         lineHeight: 46,
         marginTop: 8,
-    }
+    },
+    botao:{
+        marginTop: 16,
+        backgroundColor: "#2A9F85",
+        paddingVertical: 16,
+        borderRadius: 6,
+
+    },
+    textoBotao:{
+        textAlign: "center",
+        color: "#ffffff",
+        fontSize: 16,
+        lineHeight: 26,
+        fontWeight: "bold",
+    },
 })
