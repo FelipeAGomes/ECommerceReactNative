@@ -21,18 +21,19 @@ const estilos = StyleSheet.create({
         fontSize: 26,
         lineHeight: 46,
         marginTop: 8,
+        paddingHorizontal: 16,
     },
     botao:{
         marginTop: 16,
         backgroundColor: "#2A9F85",
         paddingVertical: 16,
         borderRadius: 6,
-
+        margin: 12,
     },
     textoBotao:{
         textAlign: "center",
         color: "#ffffff",
-        fontSize: 16,
+        fontSize: 18,
         lineHeight: 26,
         fontWeight: "bold",
     },
@@ -43,5 +44,6 @@ const estilos = StyleSheet.create({
         marginBottom: 8,
         fontSize: 20,
         lineHeight: 32,
+        paddingHorizontal: 16,
     },
 })

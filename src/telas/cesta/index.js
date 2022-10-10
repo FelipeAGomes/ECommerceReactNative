@@ -29,7 +29,7 @@ export default function Cesta({topo, detalhes, itens, precoEBotao}){
             }}
             ListFooterComponent={() => {
                 return<>
-                    <PrecoEBotao {...precoEBotao}/>
+                    <PrecoEBotao {...precoEBotao} style={estilos.precoEBotao}/>
                 </>    
             }}
        />        
